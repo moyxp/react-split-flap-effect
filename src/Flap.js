@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import styles from './styles.css'
 import classnames from 'classnames'
 
-export const Flap = ({ bottom, animated, final, hinge, children }) => {
+export const Flap = ({ bottom = false, animated = false, final = false, hinge = false, children }) => {
   const classes = classnames(styles.flap, {
     [styles.bottom]: bottom,
     [styles.top]: !bottom,
@@ -16,13 +16,6 @@ export const Flap = ({ bottom, animated, final, hinge, children }) => {
       {hinge && <div className={styles.hinge} data-kind='hinge' />}
     </div>
   )
-}
-
-Flap.defaultProps = {
-  bottom: false,
-  animated: false,
-  final: false,
-  hinge: false
 }
 
 Flap.propTypes = {

@@ -6,10 +6,10 @@ import styles from './styles.css'
 export const FlapDigit = ({
   className,
   css,
-  value,
-  prevValue,
-  final,
-  mode,
+  value = '',
+  prevValue = '',
+  final = false,
+  mode = null,
   ...restProps
 }) => {
   return (
@@ -20,13 +20,6 @@ export const FlapDigit = ({
       {final && <Flap key={`bottom-${value}`} bottom animated final {...restProps}>{value}</Flap>}
     </div>
   )
-}
-
-FlapDigit.defaultProps = {
-  value: '',
-  prevValue: '',
-  final: false,
-  mode: null
 }
 
 FlapDigit.propTypes = {

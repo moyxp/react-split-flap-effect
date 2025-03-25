@@ -23,11 +23,13 @@ export const FlapDisplay = ({
   className,
   css,
   value,
-  chars,
+  chars = Presets.NUM,
   words,
   length,
-  padChar,
-  padMode,
+  padChar = ' ',
+  timing = 30,
+  hinge = true,
+  padMode = 'auto',
   render,
   ...restProps
 }) => {
@@ -82,14 +84,6 @@ export const FlapDisplay = ({
         {children}
       </div>
     )
-}
-
-FlapDisplay.defaultProps = {
-  chars: Presets.NUM,
-  padChar: ' ',
-  timing: 30,
-  hinge: true,
-  padMode: 'auto'
 }
 
 FlapDisplay.propTypes = {
