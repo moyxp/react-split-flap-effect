@@ -27,8 +27,6 @@ export const FlapDisplay = ({
   words,
   length,
   padChar = ' ',
-  timing = 30,
-  hinge = true,
   padMode = 'auto',
   render,
   ...restProps
